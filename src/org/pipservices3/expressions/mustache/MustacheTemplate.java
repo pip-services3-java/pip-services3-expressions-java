@@ -7,12 +7,13 @@ import org.pipservices3.expressions.tokenizers.Token;
 
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Implements an mustache template class.
  */
 public class MustacheTemplate {
-    private final HashMap<String, Object> _defaultVariables = new HashMap<>();
+    private final Map<String, Object> _defaultVariables = new HashMap<>();
     private final MustacheParser _parser = new MustacheParser();
     private boolean _autoVariables = true;
 
@@ -73,7 +74,7 @@ public class MustacheTemplate {
     /**
      * The list with default variables.
      */
-    public HashMap<String, Object> getDefaultVariables() {
+    public Map<String, Object> getDefaultVariables() {
         return this._defaultVariables;
     }
 
@@ -98,7 +99,7 @@ public class MustacheTemplate {
      * @param name      a variable name to get.
      * @return a variable value or <code>undefined</code>
      */
-    public Object getVariable(HashMap<String, Object> variables, String name) {
+    public Object getVariable(Map<String, Object> variables, String name) {
         if (variables == null || name == null) return null;
 
         name = name.toLowerCase();
@@ -118,7 +119,7 @@ public class MustacheTemplate {
      *
      * @param variables The list of variables to be populated.
      */
-    public void createVariables(HashMap<String, Object> variables) {
+    public void createVariables(Map<String, Object> variables) {
         if (variables == null) return;
 
         for (var variableName : this._parser.getVariableNames()) {
@@ -152,13 +153,13 @@ public class MustacheTemplate {
      * @param variables The collection of variables
      * @return the evaluated template
      */
-    public String evaluateWithVariables(HashMap<String, Object> variables) throws MustacheException {
+    public String evaluateWithVariables(Map<String, Object> variables) throws MustacheException {
         variables = variables != null ? variables : this._defaultVariables;
 
         return this.evaluateTokens(this._parser.getResultTokens(), variables);
     }
 
-    private boolean isDefinedVariable(HashMap<String, Object> variables, String name) {
+    private boolean isDefinedVariable(Map<String, Object> variables, String name) {
         var value = this.getVariable(variables, name);
 
         if (value instanceof Boolean)
@@ -187,7 +188,7 @@ public class MustacheTemplate {
                 .replace("[\\t]", "\\t");
     }
 
-    private String evaluateTokens(List<MustacheToken> tokens, HashMap<String, Object> variables) throws MustacheException {
+    private String evaluateTokens(List<MustacheToken> tokens, Map<String, Object> variables) throws MustacheException {
         if (tokens == null) return null;
 
         StringBuilder result = new StringBuilder();
