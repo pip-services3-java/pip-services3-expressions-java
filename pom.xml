@@ -6,14 +6,14 @@
 
     <groupId>org.pipservices</groupId>
     <artifactId>pip-services3-expressions</artifactId>
-    <version>3.0.0</version>
+    <version>3.0.1</version>
     <packaging>jar</packaging>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>12</maven.compiler.source>
         <maven.compiler.target>12</maven.compiler.target>
-        <minimal.pipversion>3.0.0</minimal.pipversion>
+        <minimal.pipversion>3.0.1</minimal.pipversion>
     </properties>
 
     <licenses>
