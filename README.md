@@ -25,7 +25,7 @@ Go to the pom.xml file in Maven project and add dependencies::
 <dependency>
   <groupId>org.pipservices3</groupId>
   <artifactId>pip-services3-expressions</artifactId>
-  <version>3.1.0</version>
+  <version>3.0.0</version>
 </dependency>
 ```
 
