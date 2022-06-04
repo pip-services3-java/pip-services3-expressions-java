@@ -2,9 +2,9 @@ package org.pipservices3.expressions.calculator.tokenizers;
 
 import org.pipservices3.expressions.io.IScanner;
 import org.pipservices3.expressions.tokenizers.ITokenizer;
+import org.pipservices3.expressions.tokenizers.Token;
 import org.pipservices3.expressions.tokenizers.TokenType;
 import org.pipservices3.expressions.tokenizers.generic.GenericNumberState;
-import org.pipservices3.expressions.tokenizers.Token;
 import org.pipservices3.expressions.tokenizers.utilities.CharValidator;
 
 /**

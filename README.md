@@ -25,7 +25,7 @@ Go to the pom.xml file in Maven project and add dependencies::
 <dependency>
   <groupId>org.pipservices3</groupId>
   <artifactId>pip-services3-expressions</artifactId>
-  <version>3.0.0</version>
+  <version>3.0.2</version>
 </dependency>
 ```
 
@@ -69,7 +69,7 @@ public class Program {
         var mustache = new MustacheTemplate();
         mustache.setTemplate("Hello, {{{NAME}}}{{#ESCLAMATION}}!{{/ESCLAMATION}}{{#unless ESCLAMATION}}.{{/unless}}");
         var result = mustache.evaluateWithVariables(
-                new HashMap<String, Object>(Map.of(
+                new HashMap<>(Map.of(
                         "NAME", "Mike",
                         "ESCLAMATION", true
                 ))
@@ -83,7 +83,7 @@ public class Program {
 ## Develop
 
 For development you shall install the following prerequisites:
-* Java SE Development Kit 11+
+* Java SE Development Kit 18+
 * Eclipse Java Photon or another IDE of your choice
 * Docker
 * Apache Maven
@@ -112,4 +112,6 @@ Before committing changes run dockerized build and test as:
 
 ## Contacts
 
-The initial implementation is done by **Danil Prisyazhnyi**.
+The initial implementation is done by 
+**Sergey Seroukhov** 
+**Danil Prisyazhnyi**.

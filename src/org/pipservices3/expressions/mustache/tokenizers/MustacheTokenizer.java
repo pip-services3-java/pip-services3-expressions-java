@@ -13,7 +13,7 @@ import java.util.Objects;
 
 public class MustacheTokenizer extends AbstractTokenizer {
     private boolean _special = true;
-    private ITokenizerState _specialState;
+    private final ITokenizerState _specialState;
 
     /**
      * Constructs this object with default parameters.

@@ -32,7 +32,6 @@ public class MustacheSpecialState implements ITokenizerState {
                     break;
                 }
             }
-            
 
             tokenValue.append((char)nextSymbol);
         }

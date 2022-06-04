@@ -3,7 +3,7 @@ package org.pipservices3.expressions.io;
 public class StringScanner implements IScanner {
     public static final int EOF = -1;
 
-    private String _content;
+    private final String _content;
     private int _position;
     private int _line;
     private int _column;
@@ -55,7 +55,7 @@ public class StringScanner implements IScanner {
      * Checks if the current character represents a column
      *
      * @param charAt the current character
-     * @returns <code>true</code> if the current character is a column, or <code>false</code> otherwise.
+     * @return <code>true</code> if the current character is a column, or <code>false</code> otherwise.
      */
     private boolean isColumn(int charAt) {
         return charAt != 10 && charAt != 13;

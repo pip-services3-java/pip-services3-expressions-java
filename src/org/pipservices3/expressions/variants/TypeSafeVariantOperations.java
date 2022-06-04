@@ -39,15 +39,18 @@ public class TypeSafeVariantOperations extends AbstractVariantOperations {
     private Variant convertFromInteger(Variant value, VariantType newType) {
         var result = new Variant();
         switch (newType) {
-            case Long:
+            case Long -> {
                 result.setAsLong(value.getAsInteger().longValue());
                 return result;
-            case Float:
+            }
+            case Float -> {
                 result.setAsFloat(value.getAsInteger().floatValue());
                 return result;
-            case Double:
+            }
+            case Double -> {
                 result.setAsDouble(value.getAsInteger().doubleValue());
                 return result;
+            }
         }
         throw new UnsupportedOperationException("Variant convertion from " + this.typeToString(value.getType())
                 + " to " + this.typeToString(newType) + " is not supported.");
@@ -56,12 +59,14 @@ public class TypeSafeVariantOperations extends AbstractVariantOperations {
     private Variant convertFromLong(Variant value, VariantType newType) {
         var result = new Variant();
         switch (newType) {
-            case Float:
+            case Float -> {
                 result.setAsFloat(value.getAsLong().floatValue());
                 return result;
-            case Double:
+            }
+            case Double -> {
                 result.setAsDouble(value.getAsLong().doubleValue());
                 return result;
+            }
         }
         throw new UnsupportedOperationException("Variant convertion from " + this.typeToString(value.getType())
                 + " to " + this.typeToString(newType) + " is not supported.");

@@ -51,8 +51,7 @@ public class Token {
     }
 
     public boolean equals(Object obj) {
-        if (obj instanceof Token) {
-            Token token = (Token) obj;
+        if (obj instanceof Token token) {
             return token._type == this._type && Objects.equals(token._value, this._value);
         }
         return false;

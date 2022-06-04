@@ -242,22 +242,14 @@ public class DefaultFunctionCollection extends FunctionCollection {
         var result = new Variant();
 
         switch (value.getType()) {
-            case Integer:
-                result.setAsInteger(Math.abs(value.getAsInteger()));
-                break;
-            case Long:
-                result.setAsLong(Math.abs(value.getAsLong()));
-                break;
-            case Float:
-                result.setAsFloat(Math.abs(value.getAsFloat()));
-                break;
-            case Double:
-                result.setAsDouble(Math.abs(value.getAsDouble()));
-                break;
-            default:
+            case Integer -> result.setAsInteger(Math.abs(value.getAsInteger()));
+            case Long -> result.setAsLong(Math.abs(value.getAsLong()));
+            case Float -> result.setAsFloat(Math.abs(value.getAsFloat()));
+            case Double -> result.setAsDouble(Math.abs(value.getAsDouble()));
+            default -> {
                 value = variantOperations.convert(value, VariantType.Double);
                 result.setAsDouble(Math.abs(value.getAsDouble()));
-                break;
+            }
         }
         return result;
     }

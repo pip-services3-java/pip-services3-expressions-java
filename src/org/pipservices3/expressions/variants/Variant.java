@@ -361,8 +361,7 @@ public class Variant {
      * @return <code>true</code> if objects are equal.
      */
     public boolean equals(Object obj) {
-        if (obj instanceof Variant) {
-            Variant varObj = (Variant) obj;
+        if (obj instanceof Variant varObj) {
             Object value1 = this._value;
             Object value2 = varObj._value;
             if (value1 == null || value2 == null) {
