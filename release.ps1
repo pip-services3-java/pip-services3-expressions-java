@@ -87,7 +87,7 @@ Expire-Date: 0
 # 
 
 # Release package
-mvn clean deploy
+mvn clean deploy -DskipTests
 
 # Verify release result
 if ($LastExitCode -ne 0) {
