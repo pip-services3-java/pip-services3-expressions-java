@@ -9,6 +9,10 @@
     <version>3.0.2</version>
     <packaging>jar</packaging>
 
+    <name>Pip.Services Expressions</name>
+    <description>Tokenizers, parsers and expression calculators in Java</description>
+    <url>http://www.github.com/pip-services/pip-services</url>
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>18</maven.compiler.source>

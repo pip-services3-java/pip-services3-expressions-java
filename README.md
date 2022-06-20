@@ -1,4 +1,4 @@
-# <img src="https://uploads-ssl.webflow.com/5ea5d3315186cf5ec60c3ee4/5edf1c94ce4c859f2b188094_logo.svg" alt="Pip.Services Logo" width="200"> <br/> Component definitions for Java
+# <img src="https://uploads-ssl.webflow.com/5ea5d3315186cf5ec60c3ee4/5edf1c94ce4c859f2b188094_logo.svg" alt="Pip.Services Logo" width="200"> <br/> Tokenizers, parsers and expression calculators in Java
 
 This module is a part of the [Pip.Services](http://pipservices.org) polyglot microservices toolkit.
 It provides syntax and lexical analyzers and expression calculator optimized for repeated calculations.
